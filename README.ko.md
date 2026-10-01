@@ -25,11 +25,11 @@
 필요: Claude Code, `node` (세션 시작 훅용, npm 패키지는 쓰지 않음)
 
 ```
-claude plugin marketplace add FRe2Hug/mundap
+claude plugin marketplace add FRe2Hug/claude-checklist
 claude plugin install mundap@mundap
 ```
 
-Claude Code 안에서는 `/plugin marketplace add FRe2Hug/mundap` → `/plugin install mundap@mundap`.
+Claude Code 안에서는 `/plugin marketplace add FRe2Hug/claude-checklist` → `/plugin install mundap@mundap`.
 
 새 세션을 열고 새 작업을 요청하거나 `/mundap <하려는 일>` 을 입력하세요.
 

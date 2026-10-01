@@ -29,11 +29,11 @@ Nothing is saved without your approval.
 Requires Claude Code and `node` on your PATH (for the session-start hook; no npm packages).
 
 ```
-claude plugin marketplace add FRe2Hug/mundap
+claude plugin marketplace add FRe2Hug/claude-checklist
 claude plugin install mundap@mundap
 ```
 
-Or inside Claude Code: `/plugin marketplace add FRe2Hug/mundap` → `/plugin install mundap@mundap`.
+Or inside Claude Code: `/plugin marketplace add FRe2Hug/claude-checklist` → `/plugin install mundap@mundap`.
 
 Start a new session, then just ask for something new — or type `/mundap <what you want>`.
 
