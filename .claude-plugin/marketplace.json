@@ -1,6 +1,11 @@
 {
   "name": "mundap",
-  "owner": { "name": "FRe2Hug" },
+  "owner": {
+    "name": "FRe2Hug"
+  },
+  "metadata": {
+    "description": "mundap — ask-before-you-build Q&A checklist for Claude Code"
+  },
   "plugins": [
     {
       "name": "mundap",
