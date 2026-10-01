@@ -1,0 +1,22 @@
+# Changelog
+
+## 1.1.1 — 2026-10-01
+- Skill works without the plugin hook: falls back to default paths when the session context has none.
+- README: example excerpt, skill-only install, how to turn it off.
+- Added `examples/session.md` (full walk-through) and `examples/brief.md` (saved BRIEF).
+
+## 1.1.0 — 2026-10-01
+- Command renamed `/mundap` → `/checklist`.
+- Plugin and marketplace renamed `mundap` → `claude-checklist`. Install with
+  `claude plugin install claude-checklist@claude-checklist`.
+- Repository renamed `FRe2Hug/mundap` → `FRe2Hug/claude-checklist` (old URL redirects).
+- Your files stay in `~/.claude/mundap/` — nothing to migrate.
+
+## 1.0.0 — 2026-10-01
+- First public release.
+- Q&A checklist skill: research first, 3+ question rounds with recommended answers, summary split into
+  "what you said" / "my assumptions", approval gate, BRIEF, done-check table.
+- Session-start hook: size call on every request, user rules, known fields, open BRIEFs for the folder.
+- Follows the user's language — one skill, no language packs.
+- Learns user rules and fields (propose → approve → save).
+- Built-in fields: coding, docs, design.

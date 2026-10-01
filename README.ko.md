@@ -20,6 +20,25 @@
 
 승인 없이 저장하는 것은 없습니다.
 
+## 실제 모습
+
+```
+나:     사진 파일 이름을 날짜순으로 바꿔주는 작은 CLI 도구를 만들고 싶어.
+Claude: 새 작업으로 보고 질문부터 드리겠습니다.
+        미리 확인: ./photos-tool 은 비어 있고, Python 3.12 가 있고, exiftool 은 없습니다.
+
+        1라운드 — 목표와 결과물
+        1. 날짜는 어디서 가져올까요?
+           > EXIF 촬영일, 없으면 파일 수정일 (추천)
+             EXIF 만 · 수정일만
+        2. 새 이름 형식은?
+           > 2026-10-01_143052.jpg (추천) · 20261001_143052.jpg · 원래 이름 유지
+        ...
+```
+
+라운드·요약·승인·완료 대조 표·규칙 학습까지 전체 흐름: [examples/session.md](examples/session.md) (영어).
+저장되는 BRIEF: [examples/brief.md](examples/brief.md).
+
 ## 설치
 
 필요: Claude Code, `node` (세션 시작 훅용, npm 패키지는 쓰지 않음)
@@ -32,6 +51,11 @@ claude plugin install claude-checklist@claude-checklist
 Claude Code 안에서는 `/plugin marketplace add FRe2Hug/claude-checklist` → `/plugin install claude-checklist@claude-checklist`.
 
 새 세션을 열고 새 작업을 요청하거나 `/checklist <하려는 일>` 을 입력하세요.
+
+**스킬만 쓰기 (플러그인 없이):** `plugin/skills/checklist/` 를 `~/.claude/skills/checklist/` 로 복사하고 `/checklist` 로 직접 부르세요.
+세션 시작 훅이 없어서 작업 크기 자동 판단, 사용자 규칙, 진행 중 BRIEF 안내는 빠집니다.
+
+**끄기:** `claude plugin disable claude-checklist@claude-checklist`
 
 ## 내 파일
 

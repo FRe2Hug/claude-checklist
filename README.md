@@ -24,6 +24,25 @@ Also known as *mundap* (문답), Korean for "questions and answers".
 
 Nothing is saved without your approval.
 
+## What it looks like
+
+```
+You:    I want a small CLI tool that renames my photo files by date.
+Claude: Treating this as new work — questions first.
+        I looked around: ./photos-tool is empty, Python 3.12 is installed, no exiftool.
+
+        Round 1 — goal and output
+        1. Where does the date come from?
+           > EXIF "date taken", falling back to modified time (Recommended)
+             EXIF only · modified time only
+        2. New name format?
+           > 2026-10-01_143052.jpg (Recommended) · 20261001_143052.jpg · keep original name
+        ...
+```
+
+Full walk-through — rounds, summary, approval, done-check table, a learned rule: [examples/session.md](examples/session.md).
+The BRIEF it saves: [examples/brief.md](examples/brief.md).
+
 ## Install
 
 Requires Claude Code and `node` on your PATH (for the session-start hook; no npm packages).
@@ -36,6 +55,11 @@ claude plugin install claude-checklist@claude-checklist
 Or inside Claude Code: `/plugin marketplace add FRe2Hug/claude-checklist` → `/plugin install claude-checklist@claude-checklist`.
 
 Start a new session, then just ask for something new — or type `/checklist <what you want>`.
+
+**Skill only (no plugin):** copy `plugin/skills/checklist/` to `~/.claude/skills/checklist/` and call `/checklist` yourself.
+You lose the session-start hook: no automatic size call, no user rules or open-BRIEF reminders.
+
+**Turn it off:** `claude plugin disable claude-checklist@claude-checklist`.
 
 ## Your files
 
