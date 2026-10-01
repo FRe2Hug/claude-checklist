@@ -74,6 +74,10 @@ Claude Code 안에서는 `/plugin marketplace add FRe2Hug/claude-checklist` → 
 `coding`, `docs`, `design` (`plugin/skills/checklist/fields/`). 같은 형식으로 직접 추가할 수도 있습니다.
 예: `~/.claude/checklist/fields/data-analysis.md`
 
+## 개발
+
+세션 훅 테스트: `node --test test/session_start.test.js` (Node 18 이상, 의존성 없음)
+
 ## 참고
 
 [obra/superpowers](https://github.com/obra/superpowers) brainstorming (승인 관문, 이해한 것 되짚기),

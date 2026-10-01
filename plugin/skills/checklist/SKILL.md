@@ -1,6 +1,6 @@
 ---
 name: checklist
-description: Q&A checklist to run BEFORE starting any new work (new project, feature, model, document, tool). Several rounds of questions agree on goal, direction, don'ts, scope, done-criteria and constraints; the agreement is saved as a BRIEF, approved, and checked against at the end. Also run on "checklist", "check", "ask me first", "let's set the direction", "questions first", "문답", "체크리스트". Works in the user's language.
+description: Q&A checklist to run BEFORE starting any new work (new project, feature, model, document, tool). Several rounds of questions agree on goal, direction, don'ts, scope, done-criteria and constraints; the agreement is saved as a BRIEF, approved, and checked against at the end. Also run on "checklist", "ask me first", "let's set the direction", "questions first", "문답", "체크리스트". Works in the user's language.
 argument-hint: "[what you want to do, one line]"
 ---
 
@@ -23,9 +23,9 @@ For a continuation, read the BRIEF and start working. When unsure, treat it as n
 
 ## 1. Research first (read-only, before asking)
 **Don't ask for facts — look them up. Ask only for decisions.**
-- Folder structure, existing files, repos, drawings, models, README / CLAUDE.md, memory, related BRIEFs (paths are in the session context)
+- Folder structure, existing files, repos, README / CLAUDE.md, memory, related BRIEFs (paths are in the session context)
 - Installed tools and versions, programs that are open
-- Use what you find to make options **concrete** (e.g. "There are 3 .blend files in ./models — which one do we start from?").
+- Use what you find to make options **concrete** (e.g. "There are 3 draft specs in ./docs — which one do we start from?").
 - If research takes long, ask the questions that don't depend on it first.
 
 ## 2. Question rounds — always enough of them

@@ -1,6 +1,6 @@
 {
   "name": "claude-checklist",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Before any new task, run several rounds of questions to agree on goal, direction, don'ts, scope and done-criteria; save it as a BRIEF; check the result against it at the end. Speaks the user's language and learns their rules and fields over time.",
   "author": {
     "name": "FRe2Hug"

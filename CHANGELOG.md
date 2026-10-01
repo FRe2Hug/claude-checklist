@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.1 — 2026-10-01
+- Fix: BRIEFs with a quoted `cwd` (`cwd: "C:\work"`) were never matched.
+- Folder matching uses `path.relative`: correct case handling per OS, works for drive roots.
+- Only `~/.claude/checklist/briefs/` is read; status `done` or `closed` ends the reminder.
+- Skill no longer triggers on the bare word "check". Research example made generic.
+- Added hook tests (`test/session_start.test.js`).
+
 ## 1.2.0 — 2026-10-01
 - User files moved to `~/.claude/checklist/` (rules, fields, briefs). Override with `CHECKLIST_HOME`.
 

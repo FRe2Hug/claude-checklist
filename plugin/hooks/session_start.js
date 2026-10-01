@@ -9,9 +9,8 @@ const HOME = process.env.CHECKLIST_HOME || path.join(os.homedir(), '.claude', 'c
 const RULES = path.join(HOME, 'rules.md');
 const FIELDS = path.join(HOME, 'fields');
 const BRIEFS = path.join(HOME, 'briefs');
-const LEGACY_BRIEFS = path.join(os.homedir(), '.claude', 'briefs'); // read-only, older installs
 const BUILTIN_FIELDS = path.join(ROOT, 'skills', 'checklist', 'fields');
-const DONE = new Set(['done', 'closed', '완료']);
+const DONE = new Set(['done', 'closed']);
 
 let raw = '';
 process.stdin.setEncoding('utf8');
@@ -23,7 +22,6 @@ process.stdin.on('end', () => {
   process.exit(0);
 });
 
-const norm = p => path.resolve(String(p || '')).toLowerCase();
 const read = f => { try { return fs.readFileSync(f, 'utf8').trim(); } catch (e) { return ''; } };
 const mdFiles = dir => { try { return fs.readdirSync(dir).filter(f => f.endsWith('.md')); } catch (e) { return []; } };
 
@@ -33,7 +31,7 @@ function frontmatter(file) {
   const out = {};
   if (m) for (const line of m[1].split(/\r?\n/)) {
     const i = line.indexOf(':');
-    if (i > 0) out[line.slice(0, i).trim()] = line.slice(i + 1).trim();
+    if (i > 0) out[line.slice(0, i).trim()] = line.slice(i + 1).trim().replace(/^(["'])(.*)\1$/, '$2');
   }
   return out;
 }
@@ -41,12 +39,13 @@ function frontmatter(file) {
 // Open BRIEFs started in this folder (or a parent of it)
 function openBriefs(cwd) {
   if (!cwd) return [];
-  const here = norm(cwd);
-  return [LEGACY_BRIEFS, BRIEFS]
-    .flatMap(dir => mdFiles(dir).map(f => path.join(dir, f)))
-    .map(file => ({ file, ...frontmatter(file) }))
-    .filter(b => !DONE.has(String(b.status || '').toLowerCase()) && b.cwd &&
-      (here === norm(b.cwd) || here.startsWith(norm(b.cwd) + path.sep)))
+  const inside = dir => {
+    const rel = path.relative(path.resolve(dir), path.resolve(cwd));
+    return !rel.startsWith('..') && !path.isAbsolute(rel);
+  };
+  return mdFiles(BRIEFS)
+    .map(f => ({ file: path.join(BRIEFS, f), ...frontmatter(path.join(BRIEFS, f)) }))
+    .filter(b => b.cwd && !DONE.has(String(b.status).toLowerCase()) && inside(b.cwd))
     .slice(-5);
 }
 

@@ -85,6 +85,10 @@ Set `CHECKLIST_HOME` to use a different folder.
 - [Don't candidates] charts without the question answered, silently dropping rows
 ```
 
+## Development
+
+Tests for the session hook: `node --test test/session_start.test.js` (Node 18+, no dependencies).
+
 ## Credits
 
 Ideas borrowed from [obra/superpowers](https://github.com/obra/superpowers) (brainstorming: approval gate,
