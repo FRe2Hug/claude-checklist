@@ -1,0 +1,11 @@
+{
+  "name": "mundap",
+  "owner": { "name": "FRe2Hug" },
+  "plugins": [
+    {
+      "name": "mundap",
+      "source": "./plugin",
+      "description": "Ask before you build: a multi-round Q&A checklist that agrees on goal, direction, don'ts and done-criteria, saves it as a BRIEF, and checks the result against it. Learns your rules and fields as you work."
+    }
+  ]
+}
