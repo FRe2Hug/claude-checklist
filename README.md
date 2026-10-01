@@ -52,15 +52,15 @@ Set `MUNDAP_HOME` to use a different folder.
 ## Built-in fields
 
 `coding`, `docs`, `design` — in `plugin/skills/mundap/fields/`. Add your own by copying the format, e.g.
-`~/.claude/mundap/fields/3d-printing.md`:
+`~/.claude/mundap/fields/data-analysis.md`:
 
 ```markdown
-# Field: 3D printing
+# Field: data analysis
 
-- **Scale and size**: 1:N, max print size, who splits the model
-- **Minimum thickness**: below how many mm do we reinforce?
-- **Export**: STL / OBJ / 3MF, one file or per part
-- [Don't candidates] uniform offsets, reinforcing what's already thick enough
+- **Question**: what decision the analysis should support
+- **Data**: source, size, how fresh, known gaps
+- **Output**: notebook / chart / one-page summary
+- [Don't candidates] charts without the question answered, silently dropping rows
 ```
 
 ## Credits

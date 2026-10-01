@@ -48,7 +48,7 @@ Claude Code 안에서는 `/plugin marketplace add FRe2Hug/mundap` → `/plugin i
 ## 기본 분야
 
 `coding`, `docs`, `design` (`plugin/skills/mundap/fields/`). 같은 형식으로 직접 추가할 수도 있습니다.
-예: `~/.claude/mundap/fields/3d-printing.md`
+예: `~/.claude/mundap/fields/data-analysis.md`
 
 ## 참고
 
