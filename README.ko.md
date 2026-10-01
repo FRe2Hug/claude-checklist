@@ -1,4 +1,4 @@
-# claude-checklist (문답) — Claude Code 체크리스트 플러그인
+# claude-checklist — Claude Code 체크리스트 플러그인
 
 **만들기 전에 먼저 묻는다.** Claude 체크리스트 스킬. 새 작업을 시작하기 전에 Claude 가 여러 라운드 문답으로 방향을 합의하고,
 그 합의를 BRIEF 로 남기고, 끝날 때 BRIEF 와 대조하게 하는 Claude Code 플러그인입니다.
@@ -13,9 +13,9 @@
   사용자가 뒤집을 수 있게 합니다.
 - **사용자 언어로** — 스킬은 하나입니다. 질문·요약·BRIEF·학습 파일 모두 사용자가 쓰는 언어를 따릅니다.
 - **사용자 규칙 학습** — 같은 교정을 두 번 하거나 "앞으로는 ~" 이라고 하면 한 줄 규칙으로 제안합니다.
-  승인하면 `~/.claude/mundap/rules.md` 에 저장되고 매 세션 적용됩니다.
+  승인하면 `~/.claude/checklist/rules.md` 에 저장되고 매 세션 적용됩니다.
 - **분야 학습** — 아는 분야가 아닌 작업이면, 방금 한 문답을 바탕으로 분야 질문 목록 초안을 보여줍니다.
-  승인하면 `~/.claude/mundap/fields/<분야>.md` 로 저장되어 다음부터 쓰입니다.
+  승인하면 `~/.claude/checklist/fields/<분야>.md` 로 저장되어 다음부터 쓰입니다.
 - **이어서 하기** — 진행 중인 BRIEF 가 있는 폴더에서 세션을 열면 그 BRIEF 위치를 알려줍니다.
 
 승인 없이 저장하는 것은 없습니다.
@@ -63,16 +63,16 @@ Claude Code 안에서는 `/plugin marketplace add FRe2Hug/claude-checklist` → 
 
 | 경로 | 내용 |
 |---|---|
-| `~/.claude/mundap/rules.md` | 내 규칙 (한 줄에 하나, 매 세션 적용). 직접 고쳐도 됩니다. |
-| `~/.claude/mundap/fields/*.md` | 내 분야 질문 목록 (기본 분야보다 먼저 사용) |
-| `~/.claude/mundap/briefs/*.md` | BRIEF. `status: done` 으로 바꾸면 안내가 멈춥니다. |
+| `~/.claude/checklist/rules.md` | 내 규칙 (한 줄에 하나, 매 세션 적용). 직접 고쳐도 됩니다. |
+| `~/.claude/checklist/fields/*.md` | 내 분야 질문 목록 (기본 분야보다 먼저 사용) |
+| `~/.claude/checklist/briefs/*.md` | BRIEF. `status: done` 으로 바꾸면 안내가 멈춥니다. |
 
-다른 폴더를 쓰려면 `MUNDAP_HOME` 환경 변수를 지정하세요.
+다른 폴더를 쓰려면 `CHECKLIST_HOME` 환경 변수를 지정하세요.
 
 ## 기본 분야
 
 `coding`, `docs`, `design` (`plugin/skills/checklist/fields/`). 같은 형식으로 직접 추가할 수도 있습니다.
-예: `~/.claude/mundap/fields/data-analysis.md`
+예: `~/.claude/checklist/fields/data-analysis.md`
 
 ## 참고
 

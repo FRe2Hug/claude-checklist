@@ -5,8 +5,6 @@ save the agreement as a BRIEF, and check the result against it before calling th
 
 [한국어](README.ko.md)
 
-Also known as *mundap* (문답), Korean for "questions and answers".
-
 ## What it does
 
 - **Q&A checklist (`/checklist`)** — for new work: at least 3 rounds of questions with a recommended answer first →
@@ -17,9 +15,9 @@ Also known as *mundap* (문답), Korean for "questions and answers".
 - **Your language** — one skill, no language packs. Questions, summaries, BRIEFs and learned files follow the
   language you write in.
 - **Learns your rules** — when you correct the same thing twice or say "from now on…", Claude proposes a one-line
-  rule. Approved rules go to `~/.claude/mundap/rules.md` and are loaded in every session.
+  rule. Approved rules go to `~/.claude/checklist/rules.md` and are loaded in every session.
 - **Learns your fields** — when a task doesn't match a known field, Claude drafts a field question list from the
-  Q&A you just had. Approved, it's saved to `~/.claude/mundap/fields/<field>.md` and used next time.
+  Q&A you just had. Approved, it's saved to `~/.claude/checklist/fields/<field>.md` and used next time.
 - **Picks up where you left off** — open a session in a folder with an open BRIEF and Claude is told where it is.
 
 Nothing is saved without your approval.
@@ -67,16 +65,16 @@ Everything you teach it lives outside the plugin, so updates never overwrite it.
 
 | Path | What |
 |---|---|
-| `~/.claude/mundap/rules.md` | Your rules, one per line, injected every session. Edit freely. |
-| `~/.claude/mundap/fields/*.md` | Your field question lists (used before the built-in ones). |
-| `~/.claude/mundap/briefs/*.md` | BRIEFs. Set `status: done` to stop the reminder. |
+| `~/.claude/checklist/rules.md` | Your rules, one per line, injected every session. Edit freely. |
+| `~/.claude/checklist/fields/*.md` | Your field question lists (used before the built-in ones). |
+| `~/.claude/checklist/briefs/*.md` | BRIEFs. Set `status: done` to stop the reminder. |
 
-Set `MUNDAP_HOME` to use a different folder.
+Set `CHECKLIST_HOME` to use a different folder.
 
 ## Built-in fields
 
 `coding`, `docs`, `design` — in `plugin/skills/checklist/fields/`. Add your own by copying the format, e.g.
-`~/.claude/mundap/fields/data-analysis.md`:
+`~/.claude/checklist/fields/data-analysis.md`:
 
 ```markdown
 # Field: data analysis

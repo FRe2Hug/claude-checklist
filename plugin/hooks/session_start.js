@@ -5,7 +5,7 @@ const path = require('path');
 const os = require('os');
 
 const ROOT = path.join(__dirname, '..');
-const HOME = process.env.MUNDAP_HOME || path.join(os.homedir(), '.claude', 'mundap');
+const HOME = process.env.CHECKLIST_HOME || path.join(os.homedir(), '.claude', 'checklist');
 const RULES = path.join(HOME, 'rules.md');
 const FIELDS = path.join(HOME, 'fields');
 const BRIEFS = path.join(HOME, 'briefs');

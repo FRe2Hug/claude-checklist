@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2.0 — 2026-10-01
+- User files moved to `~/.claude/checklist/` (rules, fields, briefs). Override with `CHECKLIST_HOME`.
+
 ## 1.1.2 — 2026-10-01
 - Fix: the skill-only path fallback promised in 1.1.1 was missing from SKILL.md.
 
@@ -9,11 +12,8 @@
 - Added `examples/session.md` (full walk-through) and `examples/brief.md` (saved BRIEF).
 
 ## 1.1.0 — 2026-10-01
-- Command renamed `/mundap` → `/checklist`.
-- Plugin and marketplace renamed `mundap` → `claude-checklist`. Install with
-  `claude plugin install claude-checklist@claude-checklist`.
-- Repository renamed `FRe2Hug/mundap` → `FRe2Hug/claude-checklist` (old URL redirects).
-- Your files stay in `~/.claude/mundap/` — nothing to migrate.
+- Command, plugin, marketplace and repository all named `checklist` / `claude-checklist`.
+  Install with `claude plugin install claude-checklist@claude-checklist`.
 
 ## 1.0.0 — 2026-10-01
 - First public release.

@@ -14,7 +14,7 @@ user's latest message. This file is in English only for maintenance. Built-in fi
 translate their questions when you ask them. BRIEF front-matter keys stay in English (the hook reads them).
 
 **Paths:** the session context lists them under "checklist paths". If it doesn't (skill installed without the plugin),
-use `~/.claude/mundap/rules.md`, `~/.claude/mundap/fields/`, `~/.claude/mundap/briefs/`, and the `fields/` folder
+use `~/.claude/checklist/rules.md`, `~/.claude/checklist/fields/`, `~/.claude/checklist/briefs/`, and the `fields/` folder
 next to this file for built-in fields.
 
 ## 0. Classify — say it first

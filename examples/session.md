@@ -47,7 +47,7 @@ I looked around first. `./photos-tool` is empty, Python 3.12 and Node 24 are ins
 
 **User:** Fine, allow pillow-heif. Proceed.
 
-**Claude:** Saved the BRIEF → `~/.claude/mundap/briefs/2026-10-01_photos-tool_rename-by-date.md`
+**Claude:** Saved the BRIEF → `~/.claude/checklist/briefs/2026-10-01_photos-tool_rename-by-date.md`
 ([what it looks like](brief.md)). Starting.
 
 ---
@@ -78,4 +78,4 @@ You said "always dry-run first" twice today. Save it as a rule — *"Tools that 
 
 **User:** Yes.
 
-**Claude:** Added to `~/.claude/mundap/rules.md`.
+**Claude:** Added to `~/.claude/checklist/rules.md`.
