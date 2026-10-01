@@ -13,6 +13,10 @@ each one should pull out a decision that changes the direction or quality of the
 user's latest message. This file is in English only for maintenance. Built-in field files are in English —
 translate their questions when you ask them. BRIEF front-matter keys stay in English (the hook reads them).
 
+**Paths:** the session context lists them under "checklist paths". If it doesn't (skill installed without the plugin),
+use `~/.claude/mundap/rules.md`, `~/.claude/mundap/fields/`, `~/.claude/mundap/briefs/`, and the `fields/` folder
+next to this file for built-in fields.
+
 ## 0. Classify — say it first
 Say in one line: "Treating this as new work — questions first" or "This continues BRIEF X — proceeding as agreed".
 For a continuation, read the BRIEF and start working. When unsure, treat it as new work.

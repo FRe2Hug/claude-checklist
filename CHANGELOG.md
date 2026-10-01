@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.2 — 2026-10-01
+- Fix: the skill-only path fallback promised in 1.1.1 was missing from SKILL.md.
+
 ## 1.1.1 — 2026-10-01
 - Skill works without the plugin hook: falls back to default paths when the session context has none.
 - README: example excerpt, skill-only install, how to turn it off.
