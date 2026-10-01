@@ -1,6 +1,6 @@
-# mundap
+# mundap — Claude Code checklist plugin
 
-**Ask before you build.** A Claude Code plugin that makes Claude run a short, multi-round Q&A before any new task,
+**Ask before you build.** A checklist plugin (skill + hook) for Claude Code that makes Claude run a short, multi-round Q&A before any new task,
 save the agreement as a BRIEF, and check the result against it before calling the work done.
 
 [한국어](README.ko.md)

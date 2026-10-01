@@ -1,6 +1,6 @@
-# mundap (문답)
+# mundap (문답) — Claude Code 체크리스트 플러그인
 
-**만들기 전에 먼저 묻는다.** 새 작업을 시작하기 전에 Claude 가 여러 라운드 문답으로 방향을 합의하고,
+**만들기 전에 먼저 묻는다.** Claude 체크리스트 스킬. 새 작업을 시작하기 전에 Claude 가 여러 라운드 문답으로 방향을 합의하고,
 그 합의를 BRIEF 로 남기고, 끝날 때 BRIEF 와 대조하게 하는 Claude Code 플러그인입니다.
 
 [English](README.md)
