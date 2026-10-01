@@ -1,15 +1,15 @@
-# mundap — Claude Code checklist plugin
+# claude-checklist — Claude Code checklist plugin
 
 **Ask before you build.** A checklist plugin (skill + hook) for Claude Code that makes Claude run a short, multi-round Q&A before any new task,
 save the agreement as a BRIEF, and check the result against it before calling the work done.
 
 [한국어](README.ko.md)
 
-*mundap* (문답) is Korean for "questions and answers".
+Also known as *mundap* (문답), Korean for "questions and answers".
 
 ## What it does
 
-- **Q&A checklist (`/mundap`)** — for new work: at least 3 rounds of questions with a recommended answer first →
+- **Q&A checklist (`/checklist`)** — for new work: at least 3 rounds of questions with a recommended answer first →
   summary that separates *what you said* from *what Claude assumed* → your approval → BRIEF saved → work →
   a done-check table against the BRIEF at the end.
 - **Size call up front** — on every request Claude says in one line whether it treats it as new work (questions first)
@@ -30,12 +30,12 @@ Requires Claude Code and `node` on your PATH (for the session-start hook; no npm
 
 ```
 claude plugin marketplace add FRe2Hug/claude-checklist
-claude plugin install mundap@mundap
+claude plugin install claude-checklist@claude-checklist
 ```
 
-Or inside Claude Code: `/plugin marketplace add FRe2Hug/claude-checklist` → `/plugin install mundap@mundap`.
+Or inside Claude Code: `/plugin marketplace add FRe2Hug/claude-checklist` → `/plugin install claude-checklist@claude-checklist`.
 
-Start a new session, then just ask for something new — or type `/mundap <what you want>`.
+Start a new session, then just ask for something new — or type `/checklist <what you want>`.
 
 ## Your files
 
@@ -51,7 +51,7 @@ Set `MUNDAP_HOME` to use a different folder.
 
 ## Built-in fields
 
-`coding`, `docs`, `design` — in `plugin/skills/mundap/fields/`. Add your own by copying the format, e.g.
+`coding`, `docs`, `design` — in `plugin/skills/checklist/fields/`. Add your own by copying the format, e.g.
 `~/.claude/mundap/fields/data-analysis.md`:
 
 ```markdown

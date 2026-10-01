@@ -10,7 +10,7 @@ const RULES = path.join(HOME, 'rules.md');
 const FIELDS = path.join(HOME, 'fields');
 const BRIEFS = path.join(HOME, 'briefs');
 const LEGACY_BRIEFS = path.join(os.homedir(), '.claude', 'briefs'); // read-only, older installs
-const BUILTIN_FIELDS = path.join(ROOT, 'skills', 'mundap', 'fields');
+const BUILTIN_FIELDS = path.join(ROOT, 'skills', 'checklist', 'fields');
 const DONE = new Set(['done', 'closed', '완료']);
 
 let raw = '';
@@ -52,7 +52,7 @@ function openBriefs(cwd) {
 
 function emit(ev) {
   let text = read(path.join(ROOT, 'rules', 'core.md'));
-  text += `\n\n## mundap paths\n- User rules: ${RULES}\n- User fields: ${FIELDS}\n- Built-in fields: ${BUILTIN_FIELDS}\n- BRIEFs: ${BRIEFS}`;
+  text += `\n\n## checklist paths\n- User rules: ${RULES}\n- User fields: ${FIELDS}\n- Built-in fields: ${BUILTIN_FIELDS}\n- BRIEFs: ${BRIEFS}`;
 
   const rules = read(RULES);
   if (rules) text += `\n\n## User rules (${RULES})\n${rules}`;

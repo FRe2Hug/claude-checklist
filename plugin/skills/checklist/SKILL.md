@@ -1,10 +1,10 @@
 ---
-name: mundap
-description: Q&A checklist to run BEFORE starting any new work (new project, feature, model, document, tool). Several rounds of questions agree on goal, direction, don'ts, scope, done-criteria and constraints; the agreement is saved as a BRIEF, approved, and checked against at the end. Also run on "checklist", "ask me first", "let's set the direction", "questions first", "문답", "체크리스트". Works in the user's language.
+name: checklist
+description: Q&A checklist to run BEFORE starting any new work (new project, feature, model, document, tool). Several rounds of questions agree on goal, direction, don'ts, scope, done-criteria and constraints; the agreement is saved as a BRIEF, approved, and checked against at the end. Also run on "checklist", "check", "ask me first", "let's set the direction", "questions first", "문답", "체크리스트". Works in the user's language.
 argument-hint: "[what you want to do, one line]"
 ---
 
-# mundap — ask before you build
+# checklist — ask before you build
 
 Goal: reach an agreement the user can **see and correct** before doing the work. Questions are not a ritual;
 each one should pull out a decision that changes the direction or quality of the result.

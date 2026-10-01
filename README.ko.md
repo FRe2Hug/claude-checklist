@@ -1,4 +1,4 @@
-# mundap (문답) — Claude Code 체크리스트 플러그인
+# claude-checklist (문답) — Claude Code 체크리스트 플러그인
 
 **만들기 전에 먼저 묻는다.** Claude 체크리스트 스킬. 새 작업을 시작하기 전에 Claude 가 여러 라운드 문답으로 방향을 합의하고,
 그 합의를 BRIEF 로 남기고, 끝날 때 BRIEF 와 대조하게 하는 Claude Code 플러그인입니다.
@@ -7,7 +7,7 @@
 
 ## 하는 일
 
-- **문답 체크리스트 (`/mundap`)** — 새 작업이면 추천 답이 붙은 질문 최소 3라운드 → *말씀하신 것* 과 *Claude 의 추측* 을
+- **문답 체크리스트 (`/checklist`)** — 새 작업이면 추천 답이 붙은 질문 최소 3라운드 → *말씀하신 것* 과 *Claude 의 추측* 을
   나눈 요약 → 승인 → BRIEF 저장 → 작업 → 끝날 때 BRIEF 와 대조한 완료 표.
 - **작업 크기 먼저 말하기** — 요청마다 "새 작업이라 문답부터" 인지 "이어서 하기·작은 수정" 인지 한 줄로 말해서,
   사용자가 뒤집을 수 있게 합니다.
@@ -26,12 +26,12 @@
 
 ```
 claude plugin marketplace add FRe2Hug/claude-checklist
-claude plugin install mundap@mundap
+claude plugin install claude-checklist@claude-checklist
 ```
 
-Claude Code 안에서는 `/plugin marketplace add FRe2Hug/claude-checklist` → `/plugin install mundap@mundap`.
+Claude Code 안에서는 `/plugin marketplace add FRe2Hug/claude-checklist` → `/plugin install claude-checklist@claude-checklist`.
 
-새 세션을 열고 새 작업을 요청하거나 `/mundap <하려는 일>` 을 입력하세요.
+새 세션을 열고 새 작업을 요청하거나 `/checklist <하려는 일>` 을 입력하세요.
 
 ## 내 파일
 
@@ -47,7 +47,7 @@ Claude Code 안에서는 `/plugin marketplace add FRe2Hug/claude-checklist` → 
 
 ## 기본 분야
 
-`coding`, `docs`, `design` (`plugin/skills/mundap/fields/`). 같은 형식으로 직접 추가할 수도 있습니다.
+`coding`, `docs`, `design` (`plugin/skills/checklist/fields/`). 같은 형식으로 직접 추가할 수도 있습니다.
 예: `~/.claude/mundap/fields/data-analysis.md`
 
 ## 참고

@@ -1,14 +1,14 @@
 {
-  "name": "mundap",
+  "name": "claude-checklist",
   "owner": {
     "name": "FRe2Hug"
   },
   "metadata": {
-    "description": "mundap — Claude Code checklist plugin: ask-before-you-build Q&A checklist"
+    "description": "Claude Code checklist plugin (mundap): ask-before-you-build Q&A checklist"
   },
   "plugins": [
     {
-      "name": "mundap",
+      "name": "claude-checklist",
       "source": "./plugin",
       "description": "Ask before you build: a multi-round Q&A checklist that agrees on goal, direction, don'ts and done-criteria, saves it as a BRIEF, and checks the result against it. Learns your rules and fields as you work."
     }
