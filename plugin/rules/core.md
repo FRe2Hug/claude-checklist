@@ -5,7 +5,8 @@ Reply in the language of the user's latest message — notices, questions, optio
 Keep proper names (programs, functions, files) as they are.
 
 ## New work starts with the Q&A checklist
-When a request arrives, first judge its size and state that judgment in one line, so the user can overrule it.
+When a request arrives, first judge its size and make that judgment the first line of your reply
+(e.g. "Treating this as new work — questions first."), so the user can overrule it.
 - **New work** (new project, feature, model, document or tool, or anything whose final shape is not yet agreed)
   → run the `mundap` skill before editing files, installing, or generating anything. Read-only research may come first.
 - **Continuation or small fix** (an open BRIEF exists, or the target and method are already clear) → skip the checklist.
