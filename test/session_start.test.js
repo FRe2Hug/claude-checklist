@@ -30,6 +30,8 @@ brief('open.md', `---\ntitle: open\ncwd: ${proj}\nstatus: open\n---\n`);
 brief('quoted.md', `---\ntitle: quoted\ncwd: "${proj}"\nstatus: open\n---\n`);
 brief('crlf.md', `---\r\ntitle: crlf\r\ncwd: ${proj}\r\nstatus: open\r\n---\r\n`);
 brief('done.md', `---\ntitle: done\ncwd: ${proj}\nstatus: Done\n---\n`);
+brief('done-ko.md', `---\ntitle: done-ko\ncwd: ${proj}\nstatus: 완료\n---\n`);
+brief('open-ko.md', `---\ntitle: open-ko\ncwd: ${proj}\nstatus: 진행중\n---\n`);
 brief('other.md', `---\ntitle: other\ncwd: ${proj}X\nstatus: open\n---\n`);
 brief('broken.md', 'no front matter');
 fs.writeFileSync(path.join(home, 'rules.md'), '- always dry-run first\n');
@@ -38,7 +40,7 @@ fs.writeFileSync(path.join(home, 'fields', 'data.md'), '# data\n');
 test.after(() => fs.rmSync(base, { recursive: true, force: true }));
 
 test('open BRIEFs match the folder and its subfolders only', () => {
-  const want = ['crlf', 'open', 'quoted'];
+  const want = ['crlf', 'open', 'open-ko', 'quoted'];
   assert.deepStrictEqual(briefsFor(home, proj).sort(), want);
   assert.deepStrictEqual(briefsFor(home, path.join(proj, 'sub')).sort(), want);
   assert.deepStrictEqual(briefsFor(home, path.join(base, 'work')), []);
@@ -48,7 +50,7 @@ test('user rules and fields are injected', () => {
   const t = run(home, '{}');
   assert.match(t, /always dry-run first/);
   assert.match(t, /- User: data/);
-  assert.match(t, /- Built-in: coding, design, docs/);
+  assert.match(t, /- Built-in: 3d-modeling, 3d-print, coding, design, docs/);
 });
 
 test('missing home folder and bad input do not fail', () => {

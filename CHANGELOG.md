@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.0 — 2026-10-07
+- Question rounds are sized to the work: small 1, medium 2, large 3–4 (was: always 3+). Size is stated up front;
+  a user rule can set a minimum.
+- Round 1 always offers "Take the recommendations for everything else" — straight to the summary.
+- Learn from misses: each ⚠️ / ❌ in the done check, or a fix asked for after "done", is logged under the BRIEF's
+  new "Lessons" section and proposed as a field question for next time (saved only on approval).
+- New built-in fields: `3d-modeling`, `3d-print`.
+- Hook: BRIEF `status` in other languages also closes it (`완료`, `完了`, `完成`, `terminé`, `terminado`, `erledigt` …).
+- README: animated demo, "Why this one?" comparison with plan mode, superpowers, spec-kit and CLAUDE.md.
+
 ## 1.2.1 — 2026-10-01
 - Fix: BRIEFs with a quoted `cwd` (`cwd: "C:\work"`) were never matched.
 - Folder matching uses `path.relative`: correct case handling per OS, works for drive roots.

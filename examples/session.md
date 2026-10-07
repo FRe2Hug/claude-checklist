@@ -5,7 +5,7 @@ Questions are asked with Claude Code's `AskUserQuestion` picker; they're shown h
 
 ---
 
-**Claude:** Treating this as new work — questions first.
+**Claude:** Treating this as new work — questions first. Size: large (a new tool) → 3 rounds.
 
 I looked around first. `./photos-tool` is empty, Python 3.12 and Node 24 are installed, no exiftool.
 
@@ -24,6 +24,8 @@ I looked around first. `./photos-tool` is empty, Python 3.12 and Node 24 are ins
 4. **How do you run it?**
    - **One Python script: `python rename_photos.py <folder>` (Recommended)** · standalone .exe · something else
 
+   *(Every round 1 also offers "Take the recommendations for everything else" — skip to the summary with my picks listed as assumptions.)*
+
 **User:** Recommended for all, but also keep the original name.
 
 **What I understand so far:** a Python script that renames JPEG/HEIC by EXIF date (fallback: modified time) to
@@ -36,7 +38,7 @@ I looked around first. `./photos-tool` is empty, Python 3.12 and Node 24 are ins
 3. **Subfolders?** **Only with `--recursive` (Recommended)** · always · never
 4. **Don'ts** *(multi-select)*: ☑ overwriting files · ☑ installing exiftool · ☑ a GUI · ☐ an undo log · ☑ extra dependencies besides Pillow
 
-*(Round 3: built-in `coding` field questions — repo and tests. Round 4: scope and done-criteria.)*
+*(Round 3: built-in `coding` field questions — repo and tests — plus scope and done-criteria.)*
 
 ### Summary
 
@@ -73,6 +75,13 @@ Not done yet: the 2,000-photo timing check needs a real folder.
 **User:** Ran it on my folder — 4 s. Done.
 
 **Claude:** Set the BRIEF to `status: done`.
+
+The ⚠️ happened because we never agreed on test data. Added to the BRIEF's Lessons, and for your `coding` field file —
+*"Next time, ask: is there a real-size sample to test on, and where?"* Add it?
+
+**User:** Yes.
+
+**Claude:** Added to `~/.claude/checklist/fields/coding.md`.
 
 You said "always dry-run first" twice today. Save it as a rule — *"Tools that change files: dry-run by default"*?
 

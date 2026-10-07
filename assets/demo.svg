@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="450" viewBox="0 0 860 450" role="img" aria-label="claude-checklist demo: questions, BRIEF, done check, lesson learned">
+<style>
+.t{font:13.5px ui-monospace,SFMono-Regular,Consolas,Menlo,monospace;white-space:pre}
+.b{font-weight:700}
+.l{opacity:0;animation:22.0s linear infinite}
+@media (prefers-reduced-motion:reduce){.l{animation:none;opacity:1}.cov{display:none}}
+@keyframes k0{0%,1.36%{opacity:0}2.56%,93%{opacity:1}97%,100%{opacity:0}}.l0{animation-name:k0}@keyframes k1{0%,16.36%{opacity:0}17.56%,93%{opacity:1}97%,100%{opacity:0}}.l1{animation-name:k1}@keyframes k2{0%,20.00%{opacity:0}21.20%,93%{opacity:1}97%,100%{opacity:0}}.l2{animation-name:k2}@keyframes k3{0%,24.55%{opacity:0}25.75%,93%{opacity:1}97%,100%{opacity:0}}.l3{animation-name:k3}@keyframes k4{0%,26.82%{opacity:0}28.02%,93%{opacity:1}97%,100%{opacity:0}}.l4{animation-name:k4}@keyframes k5{0%,29.09%{opacity:0}30.29%,93%{opacity:1}97%,100%{opacity:0}}.l5{animation-name:k5}@keyframes k6{0%,30.45%{opacity:0}31.65%,93%{opacity:1}97%,100%{opacity:0}}.l6{animation-name:k6}@keyframes k7{0%,31.82%{opacity:0}33.02%,93%{opacity:1}97%,100%{opacity:0}}.l7{animation-name:k7}@keyframes k8{0%,38.18%{opacity:0}39.38%,93%{opacity:1}97%,100%{opacity:0}}.l8{animation-name:k8}@keyframes k9{0%,43.64%{opacity:0}44.84%,93%{opacity:1}97%,100%{opacity:0}}.l9{animation-name:k9}@keyframes k10{0%,50.00%{opacity:0}51.20%,93%{opacity:1}97%,100%{opacity:0}}.l10{animation-name:k10}@keyframes k11{0%,55.45%{opacity:0}56.65%,93%{opacity:1}97%,100%{opacity:0}}.l11{animation-name:k11}@keyframes k12{0%,60.91%{opacity:0}62.11%,93%{opacity:1}97%,100%{opacity:0}}.l12{animation-name:k12}@keyframes k13{0%,62.73%{opacity:0}63.93%,93%{opacity:1}97%,100%{opacity:0}}.l13{animation-name:k13}@keyframes k14{0%,69.09%{opacity:0}70.29%,93%{opacity:1}97%,100%{opacity:0}}.l14{animation-name:k14}@keyframes k15{0%,71.82%{opacity:0}73.02%,93%{opacity:1}97%,100%{opacity:0}}.l15{animation-name:k15}@keyframes ty{0%,1.56%{transform:translateX(0);animation-timing-function:steps(62,end)}13.18%,100%{transform:translateX(516px)}}.cov{animation:ty 22.0s infinite}</style>
+<rect width="860" height="450" rx="10" fill="#18181b"/>
+<rect width="860" height="34" rx="10" fill="#27272a"/><rect y="24" width="860" height="10" fill="#27272a"/>
+<circle cx="20" cy="17" r="6" fill="#ef6a5e"/><circle cx="40" cy="17" r="6" fill="#f4bf4f"/><circle cx="60" cy="17" r="6" fill="#61c554"/>
+<text class="t" x="430.0" y="22" fill="#a1a1aa" text-anchor="middle">claude — /checklist</text>
+<text class="t l l0" x="24.0" y="72"><tspan fill="#7cc4fa" class="b">&gt; </tspan><tspan fill="#ffffff">I want a small CLI tool that renames my photo files by date.</tspan></text>
+<rect class="cov" x="40.3" y="56" width="524" height="22" fill="#18181b"/>
+<text class="t l l1" x="24.0" y="102"><tspan fill="#f0a35e">● </tspan><tspan fill="#d4d4d8">Treating this as new work — questions first. </tspan><tspan fill="#f0a35e">Size: large (new tool) → 3 rounds</tspan></text>
+<text class="t l l2" x="40.3" y="124"><tspan fill="#8b8b94">Looked around: ./photos-tool is empty · Python 3.12 · no exiftool</tspan></text>
+<text class="t l l3" x="40.3" y="146"><tspan fill="#ffffff" class="b">Round 1 — goal and output</tspan></text>
+<text class="t l l4" x="40.3" y="168"><tspan fill="#d4d4d8">Where does the date come from?</tspan></text>
+<text class="t l l5" x="40.3" y="190"><tspan fill="#7cc4fa">❯ EXIF date taken, fallback to modified time </tspan><tspan fill="#f0a35e">(Recommended)</tspan></text>
+<text class="t l l6" x="56.5" y="212"><tspan fill="#8b8b94">EXIF only  ·  modified time only</tspan></text>
+<text class="t l l7" x="56.5" y="234"><tspan fill="#8b8b94">Take the recommendations for everything else</tspan></text>
+<text class="t l l8" x="40.3" y="256"><tspan fill="#8b8b94">Rounds 2–3: dry-run by default, never overwrite, Pillow only … </tspan></text>
+<text class="t l l9" x="40.3" y="278"><tspan fill="#ffffff" class="b">Summary  </tspan><tspan fill="#d4d4d8">You said: </tspan><tspan fill="#6cc58a">11 decisions</tspan><tspan fill="#d4d4d8">   My assumption: </tspan><tspan fill="#e5c07b">pillow-heif — confirm?</tspan></text>
+<text class="t l l10" x="40.3" y="300"><tspan fill="#6cc58a" class="b">✓ </tspan><tspan fill="#d4d4d8">BRIEF saved → ~/.claude/checklist/briefs/2026-10-01_photos-tool.md</tspan></text>
+<text class="t l l11" x="40.3" y="322"><tspan fill="#8b8b94">… work …</tspan></text>
+<text class="t l l12" x="40.3" y="344"><tspan fill="#ffffff" class="b">Done check</tspan></text>
+<text class="t l l13" x="56.5" y="366"><tspan fill="#6cc58a" class="b">✓ </tspan><tspan fill="#d4d4d8">dry-run changes nothing   </tspan><tspan fill="#6cc58a" class="b">✓ </tspan><tspan fill="#d4d4d8">clashes get _2   </tspan><tspan fill="#e5c07b" class="b">! </tspan><tspan fill="#e5c07b">2,000-photo timing not verified</tspan></text>
+<text class="t l l14" x="40.3" y="388"><tspan fill="#f0a35e">Lesson → </tspan><tspan fill="#d4d4d8">Next time, ask: &quot;Is there a real-size sample to test on?&quot;</tspan></text>
+<text class="t l l15" x="56.5" y="410"><tspan fill="#8b8b94">Add it to fields/coding.md?  </tspan><tspan fill="#7cc4fa" class="b">Yes</tspan></text>
+</svg>

@@ -5,9 +5,11 @@
 
 [English](README.md)
 
+![claude-checklist 데모: 추천 답이 붙은 질문, BRIEF 저장, 완료 대조, 배운 점](assets/demo.svg)
+
 ## 하는 일
 
-- **문답 체크리스트 (`/checklist`)** — 새 작업이면 추천 답이 붙은 질문 최소 3라운드 → *말씀하신 것* 과 *Claude 의 추측* 을
+- **문답 체크리스트 (`/checklist`)** — 새 작업이면 작업 크기에 맞춰 1~4라운드 질문 (추천 답이 첫 선택지, "나머지는 추천대로" 도 가능) → *말씀하신 것* 과 *Claude 의 추측* 을
   나눈 요약 → 승인 → BRIEF 저장 → 작업 → 끝날 때 BRIEF 와 대조한 완료 표.
 - **작업 크기 먼저 말하기** — 요청마다 "새 작업이라 문답부터" 인지 "이어서 하기·작은 수정" 인지 한 줄로 말해서,
   사용자가 뒤집을 수 있게 합니다.
@@ -16,9 +18,23 @@
   승인하면 `~/.claude/checklist/rules.md` 에 저장되고 매 세션 적용됩니다.
 - **분야 학습** — 아는 분야가 아닌 작업이면, 방금 한 문답을 바탕으로 분야 질문 목록 초안을 보여줍니다.
   승인하면 `~/.claude/checklist/fields/<분야>.md` 로 저장되어 다음부터 쓰입니다.
+- **놓친 것에서 배우기** — 완료 대조의 ⚠️·❌, 또는 "완료" 뒤에 요청한 수정이 그 분야의 다음 질문으로 제안됩니다:
+  *"다음엔 미리 물을까요: …?"*. 쓸수록 체크리스트가 정확해집니다.
 - **이어서 하기** — 진행 중인 BRIEF 가 있는 폴더에서 세션을 열면 그 BRIEF 위치를 알려줍니다.
 
 승인 없이 저장하는 것은 없습니다.
+
+## 왜 이걸 쓰나
+
+| | 잘 맞는 곳 | 이 플러그인이 더하는 것 |
+|---|---|---|
+| **계획 모드** (기본 기능) | 코드 수정 전에 Claude 의 계획 검토 | 추천 답이 붙은 질문, *하기 싫은 것* 목록, 세션이 끝나도 남는 완료 대조 |
+| **[superpowers](https://github.com/obra/superpowers)** brainstorming | 설계 → 계획 → TDD 로 이어지는 코딩 작업 전체 | 가벼운 스킬 하나, 코딩 밖 분야(3D·문서·디자인) |
+| **[spec-kit](https://github.com/github/spec-kit)** | 저장소에 명세를 두는 명세 주도 개발 | 작업 크기에 맞춤(작은 일은 1라운드), BRIEF 는 저장소 밖에 |
+| **CLAUDE.md** | 항상 적용되는 규칙 | 작업마다의 합의와 끝날 때 대조. 규칙은 손으로 쓰지 않고 교정에서 배움 |
+
+이것만 하는 것: BRIEF 가 **폴더에 붙어** 다시 열면 돌아오고, **하기 싫은 것**을 완료 전에 한 줄씩 확인하고,
+**놓친 것이 다음 질문**이 됩니다.
 
 ## 실제 모습
 
@@ -65,13 +81,13 @@ Claude Code 안에서는 `/plugin marketplace add FRe2Hug/claude-checklist` → 
 |---|---|
 | `~/.claude/checklist/rules.md` | 내 규칙 (한 줄에 하나, 매 세션 적용). 직접 고쳐도 됩니다. |
 | `~/.claude/checklist/fields/*.md` | 내 분야 질문 목록 (기본 분야보다 먼저 사용) |
-| `~/.claude/checklist/briefs/*.md` | BRIEF. `status: done` 으로 바꾸면 안내가 멈춥니다. |
+| `~/.claude/checklist/briefs/*.md` | BRIEF. `status: done` (또는 `완료`) 으로 바꾸면 안내가 멈춥니다. |
 
 다른 폴더를 쓰려면 `CHECKLIST_HOME` 환경 변수를 지정하세요.
 
 ## 기본 분야
 
-`coding`, `docs`, `design` (`plugin/skills/checklist/fields/`). 같은 형식으로 직접 추가할 수도 있습니다.
+`coding`, `docs`, `design`, `3d-modeling`, `3d-print` (`plugin/skills/checklist/fields/`). 같은 형식으로 직접 추가할 수도 있습니다.
 예: `~/.claude/checklist/fields/data-analysis.md`
 
 ## 개발

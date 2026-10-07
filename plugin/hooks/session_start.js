@@ -10,7 +10,8 @@ const RULES = path.join(HOME, 'rules.md');
 const FIELDS = path.join(HOME, 'fields');
 const BRIEFS = path.join(HOME, 'briefs');
 const BUILTIN_FIELDS = path.join(ROOT, 'skills', 'checklist', 'fields');
-const DONE = new Set(['done', 'closed']);
+// Closed statuses, including common words in other languages so users can write status in their own language
+const DONE = new Set(['done', 'closed', '완료', '完了', '完成', '已完成', 'terminé', 'terminado', 'erledigt', 'fertig']);
 
 let raw = '';
 process.stdin.setEncoding('utf8');

@@ -46,3 +46,6 @@ status: open
 ## Decision log
 - 2026-10-01 Keep original name as suffix — user wants to trace back to camera numbering
 - 2026-10-01 Allow pillow-heif — needed for HEIC
+
+## Lessons
+- Timing check was ⚠️ — no real-size sample agreed up front → "Is there a real-size sample to test on, and where?" (added to field file: yes)

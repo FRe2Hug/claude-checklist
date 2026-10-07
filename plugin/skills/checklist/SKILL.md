@@ -28,8 +28,14 @@ For a continuation, read the BRIEF and start working. When unsure, treat it as n
 - Use what you find to make options **concrete** (e.g. "There are 3 draft specs in ./docs — which one do we start from?").
 - If research takes long, ask the questions that don't depend on it first.
 
-## 2. Question rounds — always enough of them
-For new work, **at least 3 rounds**, more if needed. One round = one AskUserQuestion call (up to 4 questions).
+## 2. Question rounds — sized to the work
+One round = one AskUserQuestion call (up to 4 questions). Say the size and round count in one line before round 1:
+- **Small** (result's shape is clear, 1–2 files or one object) → 1 round: rounds 1, 2 and 4 squeezed together.
+- **Medium** → 2 rounds. **Large** (new project, new model, new tool, unfamiliar field) → 3–4 rounds.
+
+The user can override the size, and a user rule can set a minimum. Round 1 always ends with a question offering
+**"Take the recommendations for everything else"** — if picked, fill the rest with your recommended answers,
+list them under *My assumptions*, and go straight to the summary.
 
 Treat the decisions as a tree: earlier answers change later questions. Put in one round only the questions that
 can be answered now; defer anything whose options depend on another answer in the same round.
@@ -88,4 +94,8 @@ Re-read the BRIEF and report as a table:
 
 - Check each "don't" in one line: not broken.
 - If anything is ❌ or ⚠️, don't call it done; list it as remaining work.
+- **Learn from misses:** for each ❌ / ⚠️, and for any fix the user asks for after you reported done, add one line to
+  the BRIEF's "Lessons" and propose one question (or don't candidate) for the field file that would have caught it
+  up front: "Next time, ask: …?". Append it to `<user fields folder>/<field>.md` only if the user approves
+  (copy the built-in file there first if the user has none for this field).
 - Only when the user says it's finished, set the BRIEF front matter to `status: done` (never close it yourself).

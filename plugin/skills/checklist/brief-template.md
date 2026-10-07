@@ -2,7 +2,7 @@
 title: <short title>
 cwd: <absolute path of the work folder>
 date: <YYYY-MM-DD>
-field: <field name, e.g. coding | docs | design | your own>
+field: <field name, e.g. coding | docs | design | 3d-modeling | 3d-print | your own>
 status: open
 ---
 
@@ -39,3 +39,6 @@ status: open
 
 ## Decision log
 - <date> <decision> — <reason>
+
+## Lessons
+- <what was missed> → <question to ask next time> (added to field file: yes / no)
